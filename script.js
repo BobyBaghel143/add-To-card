@@ -43,8 +43,21 @@ let ArrProducts = [
   },
 ];
 
-let body = document.querySelector("body");
-let products = document.querySelector(".products");
+const body = document.querySelector("body");
+const products = document.querySelector(".products");
+const shoppingBasket = document.querySelector(".shoppingBasket");
+const close = document.querySelector(".close");
+
+
+let checkOutList = [];
+
+shoppingBasket.onclick = () => {
+    body.classList.add("active");
+}
+
+close.onclick = () => {
+    body.classList.remove("active")
+}
 
 function onInIt() {
   ArrProducts.forEach((item, key) => {
