@@ -14,7 +14,6 @@ body {
   margin: auto;
   max-width: 90vw;
   transition: 0.5s;
-  /* border: 1px solid black; */
 }
 
 header {
@@ -24,7 +23,6 @@ header {
   height: 80px;
   padding: 15px 80px;
   cursor: pointer;
-  /* border: 1px solid black; */
 }
 
 .shoppingBasket {
@@ -131,4 +129,70 @@ header {
 
 .active .card {
   left: calc(100% - 400px);
+}
+
+.star {
+  color: #ff9c1a;
+}
+
+.productList {
+  padding: 15px;
+  height: auto;
+  /* border: 2px solid white; */
+}
+
+.productList li {
+  display: grid;
+  grid-template-columns: 100px repeat(3, 1fr);
+  row-gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid gray;
+  color: #fff;
+}
+
+.productList li img {
+  width: 50px;
+  background-color: #fff;
+}
+
+.productList li div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productList li button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #fff;
+  background-color: black;
+  cursor: pointer;
+}
+
+.productList li .count {
+  padding: 10px;
+}
+
+@media only screen and (max-width: 720px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  header {
+    padding: 25px;
+  }
+  .products {
+    display: block;
+    padding: 5px;
+  }
+
+  .products .item {
+    margin-bottom: 20px;
+  }
 }
